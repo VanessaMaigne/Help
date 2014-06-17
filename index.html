@@ -1,0 +1,143 @@
+<HTML>
+
+<HEAD>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dynamic Help</title>
+    <link rel="icon" href="https://avatars3.githubusercontent.com/u/6544448?s=460" type="image/png">
+
+    <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.class.js"></script>
+    <script type="text/javascript" src="d3.v3.min.js"></script>
+    <script type="text/javascript" src="Help.js"></script>
+
+    <style type="text/css">
+        #buttonHelp {
+            margin: 8px 0 0 15px;
+        }
+
+        #circle {
+            background: grey;
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            margin: auto;
+        }
+
+        #pageWrapper {
+            height: 100%;
+        }
+
+        .leftMenu {
+            background-color: #222222;
+            height: 100%;
+            padding: 20px 0 0 25px;
+        }
+
+        .leftMenu a {
+            color: white !important;
+        }
+
+        h3 {
+            color: #5BC0DE;
+        }
+
+        h4 {
+            text-align: center;
+        }
+    </style>
+</HEAD>
+
+<BODY>
+
+<div id="pageWrapper">
+    <div role="navigation" class="row-fluid navbar-inverse navigation">
+        <div class="navbar-header">
+            <button id="buttonHelp" class="btn btn-info" type="button">Launch Help !</button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="navBar1" href="#">navBar1</a></li>
+                <li><a id="navBar2" href="#">navBar2</a></li>
+                <li><a id="navBar3" href="#">navBar3</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input id="navSearch" type="text" placeholder="Search..." class="form-control">
+            </form>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-3 col-md-2 leftMenu">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a id="menu1" href="#">Menu 1</a></li>
+                <li><a id="menu2" href="#">Menu 2</a></li>
+                <li><a id="menu3" href="#">Menu 3</a></li>
+                <li><a id="menu4" href="#">Menu 4</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-md-10">
+            <h1 class="page-header">Example of dynamic help.</h1>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-4">
+                    <div id="circle"></div>
+                    <h4>Image</h4>
+                </div>
+                <div class="col-xs-6 col-sm-8 col-md-6">
+                    <BR/>
+
+                    <h3>Click on "Launch Help !" button</h3>
+                </div>
+            </div>
+
+            <h2 class="sub-header">Content</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu fringilla lacus, nec euismod sem. Phasellus eu ante tempor, elementum neque tristique,
+                venenatis erat. Duis iaculis metus vel lorem ornare, a luctus velit ultricies. Cras faucibus quis quam tempor tincidunt. In sed porta risus. Aliquam
+                laoreet, justo vel consectetur sodales, erat mi varius nulla, eget malesuada mauris orci dictum neque. Quisque vel magna convallis, fermentum tellus sed,
+                tincidunt tellus. Cras diam arcu, eleifend vitae rutrum at, tincidunt eu metus. Pellentesque ornare arcu varius, hendrerit neque in, tempus odio. Cras
+                varius dignissim porttitor. Nulla eu est quis turpis convallis fringilla. </p>
+
+            <p><a id="buttonAction" class="btn btn-default" href="#" role="button">Button Action</a></p>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $( "#buttonHelp" ).on( "click", function()
+    {
+        createHelp();
+    } );
+
+    function createHelp()
+    {
+        var parameters = new Object();
+
+        parameters.helpArray = [
+            {linkType:"middle", divToHelpId:"navSearch", text:"Help for navSearch", marginTop:25, marginLeft:43, stage: 5},
+            {linkType:"left", divToHelpId:"navBar3", text:"Help for navBar3. Help for navBar3. Help for navBar3.", textLengthByLine:18, marginTop:41, marginLeft:43, stage: 3},
+            {linkType:"left", divToHelpId:"navBar2", text:"Help for navBar2", marginTop:41, marginLeft:43, stage: 2},
+            {linkType:"left", divToHelpId:"navBar1", text:"Help for navBar1", marginTop:41, marginLeft:43, stage: 1},
+
+            {linkType:"simple", divToHelpId:"menu1", text:"Help for menu1", marginTop:15, marginLeft:-54},
+            {linkType:"simple", divToHelpId:"menu2", text:"Help for menu2", marginTop:15, marginLeft:-54},
+            {linkType:"simple", divToHelpId:"menu3", text:"Help for menu3", marginTop:15, marginLeft:-54},
+            {linkType:"right", divToHelpId:"menu4", text:"Help for menu4", marginTop:35, marginLeft:32},
+
+            {linkType:"simple", divToHelpId:"circle", text:"Help for circle", marginTop:78, marginLeft:-10},
+            {linkType:"simpleLeft", divToHelpId:"buttonAction", text:"Help for buttonAction", marginTop:10, marginLeft:30},
+        ];
+
+//        parameters.parentContainerId = "#pageWrapper";
+        new Help( parameters );
+    }
+</script>
+</BODY>
+</HTML>
+
