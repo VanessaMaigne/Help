@@ -48,63 +48,77 @@
         h4 {
             text-align: center;
         }
+
+        .navbar-collapse.collapse {
+            padding-right: 140px;
+        }
     </style>
 </HEAD>
 
 <BODY>
 
-<div id="pageWrapper">
-    <div role="navigation" class="row-fluid navbar-inverse navigation">
-        <div class="navbar-header">
-            <button id="buttonHelp" class="btn btn-info" type="button">Launch Help !</button>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a id="navBar1" href="#">navBar1</a></li>
-                <li><a id="navBar2" href="#">navBar2</a></li>
-                <li><a id="navBar3" href="#">navBar3</a></li>
-            </ul>
-            <form class="navbar-form navbar-right">
-                <input id="navSearch" type="text" placeholder="Search..." class="form-control">
-            </form>
-        </div>
-    </div>
+<div id="pageWrapper" class="container">
 
+    <div class="row col-sm-12 col-md-12 text-center">
 
-    <div class="row">
-        <div class="col-sm-3 col-md-2 leftMenu">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a id="menu1" href="#">Menu 1</a></li>
-                <li><a id="menu2" href="#">Menu 2</a></li>
-                <li><a id="menu3" href="#">Menu 3</a></li>
-                <li><a id="menu4" href="#">Menu 4</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-9 col-md-10">
-            <h1 class="page-header">Example of dynamic help.</h1>
-
-            <div class="row">
-                <div class="col-xs-6 col-sm-3 col-md-4">
-                    <div id="circle"></div>
-                    <h4>Image</h4>
-                </div>
-                <div class="col-xs-6 col-sm-8 col-md-6">
-                    <BR/>
-
-                    <h3>Click on "Launch Help !" button</h3>
-                </div>
+        <div role="navigation" class="row navbar-inverse navigation">
+            <div class="navbar-header">
+                <button id="buttonHelp" class="btn btn-info" type="button">Launch Help !</button>
             </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="navBar1" href="#">navBar1</a></li>
+                    <li><a id="navBar2" href="#">navBar2</a></li>
+                    <li><a id="navBar3" href="#">navBar3</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input id="navSearch" type="text" placeholder="Search..." class="form-control">
+                </form>
 
-            <h2 class="sub-header">Content</h2>
+                <!--Github link-->
+                <a href="https://github.com/VanessaMaigne/Help" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;"
+                                                                                     src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67"
+                                                                                     alt="Fork me on GitHub"
+                                                                                     data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+            </div>
+        </div>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu fringilla lacus, nec euismod sem. Phasellus eu ante tempor, elementum neque tristique,
-                venenatis erat. Duis iaculis metus vel lorem ornare, a luctus velit ultricies. Cras faucibus quis quam tempor tincidunt. In sed porta risus. Aliquam
-                laoreet, justo vel consectetur sodales, erat mi varius nulla, eget malesuada mauris orci dictum neque. Quisque vel magna convallis, fermentum tellus sed,
-                tincidunt tellus. Cras diam arcu, eleifend vitae rutrum at, tincidunt eu metus. Pellentesque ornare arcu varius, hendrerit neque in, tempus odio. Cras
-                varius dignissim porttitor. Nulla eu est quis turpis convallis fringilla. </p>
 
-            <p><a id="buttonAction" class="btn btn-default" href="#" role="button">Button Action</a></p>
+        <div class="row">
+            <div class="col-sm-3 col-md-2 leftMenu">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a id="menu1" href="#">Menu 1</a></li>
+                    <li><a id="menu2" href="#">Menu 2</a></li>
+                    <li><a id="menu3" href="#">Menu 3</a></li>
+                    <li><a id="menu4" href="#">Menu 4</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-md-10">
+                <h1 class="page-header">Example of dynamic help.</h1>
 
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3 col-md-4">
+                        <div id="circle"></div>
+                        <h4>Image</h4>
+                    </div>
+                    <div class="col-xs-6 col-sm-8 col-md-6">
+                        <BR/>
+
+                        <h3>Click on "Launch Help !" button</h3>
+                    </div>
+                </div>
+
+                <h2 class="sub-header">Content</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu fringilla lacus, nec euismod sem. Phasellus eu ante tempor, elementum neque tristique,
+                    venenatis erat. Duis iaculis metus vel lorem ornare, a luctus velit ultricies. Cras faucibus quis quam tempor tincidunt. In sed porta risus. Aliquam
+                    laoreet, justo vel consectetur sodales, erat mi varius nulla, eget malesuada mauris orci dictum neque. Quisque vel magna convallis, fermentum tellus sed,
+                    tincidunt tellus. Cras diam arcu, eleifend vitae rutrum at, tincidunt eu metus. Pellentesque ornare arcu varius, hendrerit neque in, tempus odio. Cras
+                    varius dignissim porttitor. Nulla eu est quis turpis convallis fringilla. </p>
+
+                <p><a id="buttonAction" class="btn btn-default" href="#" role="button">Button Action</a></p>
+
+            </div>
         </div>
     </div>
 </div>
@@ -125,10 +139,10 @@
             {linkType:"left", divToHelpId:"navBar2", text:"Help for navBar2", marginTop:41, marginLeft:43, stage: 2},
             {linkType:"left", divToHelpId:"navBar1", text:"Help for navBar1", marginTop:41, marginLeft:43, stage: 1},
 
-            {linkType:"simple", divToHelpId:"menu1", text:"Help for menu1", marginTop:15, marginLeft:-54},
-            {linkType:"simple", divToHelpId:"menu2", text:"Help for menu2", marginTop:15, marginLeft:-54},
-            {linkType:"simple", divToHelpId:"menu3", text:"Help for menu3", marginTop:15, marginLeft:-54},
-            {linkType:"right", divToHelpId:"menu4", text:"Help for menu4", marginTop:35, marginLeft:32},
+            {linkType:"simple", divToHelpId:"menu1", text:"Help for menu1", marginTop:15},
+            {linkType:"simple", divToHelpId:"menu2", text:"Help for menu2", marginTop:15},
+            {linkType:"simple", divToHelpId:"menu3", text:"Help for menu3", marginTop:15},
+            {linkType:"right", divToHelpId:"menu4", text:"Help for menu4", marginTop:35, marginLeft:72},
 
             {linkType:"simple", divToHelpId:"circle", text:"Help for circle", marginTop:78, marginLeft:-10},
             {linkType:"simpleLeft", divToHelpId:"buttonAction", text:"Help for buttonAction", marginTop:10, marginLeft:30},
